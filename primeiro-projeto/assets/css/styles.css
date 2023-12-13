@@ -1,0 +1,135 @@
+body {
+    font-size: 1rem;
+    font-family: var(--body-font);
+    line-height: 1.5;
+    color: var(--color-black);
+}
+
+.logo {
+    color: var(--color-black);
+    position: relative;
+    z-index: 2;
+}
+
+.header-page {
+    width: 90%;
+    height: 5rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-page ul {
+    display: flex;
+    column-gap: 3rem;   
+}
+
+.btn {
+    border: .1rem solid var(--color-black);
+    padding: .8rem 3rem;
+    border-radius: 1rem;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.sanduiche {
+    cursor: pointer;
+    display: none;
+
+}
+
+.barra {
+    display: block;
+    width: 3rem;
+    height: .3rem;
+    background-color: var(--color-black);
+    margin: .5rem auto;
+    border-radius: .7rem;
+    transition: .5s;
+}
+
+.hero {
+    width: 90%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    margin: 3rem auto 4rem;
+    width: 60%;
+    font-size: .9rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+}
+
+.hero-image img {
+    height: 500px;
+}
+
+/* Montando o responsivo do menu */
+@media(max-width: 1024px) {
+    
+    .sanduiche {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+    .nav-menu {
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 90rem;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        background-color: var(--color-white);
+        transition: .5s;
+    }
+
+    .nav-menu li {
+        margin: 2rem 0;
+    }
+
+    .active {
+        top: 0;
+    }
+
+    /* animando o menu */
+    .sanduiche.active .barra:first-child  {
+        transform: translateY(8px) rotate(360deg) rotate(45deg);
+    }
+
+    .sanduiche.active .barra:nth-child(2) {
+        opacity: 0;
+    }
+
+    .sanduiche.active .barra:last-child  {
+        transform: translateY(-8px) rotate(360deg) rotate(-45deg);
+    }
+
+    /* *******************************hero****************************************/
+    .hero {
+        grid-template-columns: 1fr; 
+    }
+}

@@ -1,0 +1,39 @@
+:root {
+    --body-font:'Poppins', sans-serif;
+    --color-white: #ffffff;
+    --color-light: #202020;
+    --color-black: #000000;
+    --color-grey: #d5d5d5;    
+}
+
+/* Reset CSS */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+a:hover {
+    color: var(--color-grey);
+}
